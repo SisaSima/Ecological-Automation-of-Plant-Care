@@ -11,5 +11,10 @@ We are currently facing many environmental challenges, such as global warming an
  This work describes in detail the individual steps of the development of this device from the design to the implementation of sensors and machine learning algorithms.
 
 
-# HELLO WORLD
-Programmed to work and not to feel
+# Circuit + used electroparts, where did I get them + circuitboard, schema, PCB
+# Code + how to use libraries, install circuitpython to your device, explain code
+# 3d Model
+
+# notes
+- https://github.com/khristinakokolus/smart_flowerpot inspiration
+- https://github.com/pop-os/shell
