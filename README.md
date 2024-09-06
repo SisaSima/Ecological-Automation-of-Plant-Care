@@ -12,6 +12,9 @@ We are currently facing many environmental challenges, such as global warming an
 
 
 # Circuit + used electroparts, where did I get them + circuitboard, schema, PCB
+![image](https://github.com/user-attachments/assets/eedb83a2-ca62-448c-ba7a-b21b84b948e6)
+
+
 # Code + how to use libraries, install circuitpython to your device, explain code
 # 3d Model
 
