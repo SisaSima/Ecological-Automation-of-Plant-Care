@@ -11,9 +11,8 @@ We are currently facing many environmental challenges, such as global warming an
  This work describes in detail the individual steps of the development of this device from the design to the implementation of sensors and machine learning algorithms.
 
 
-# Circuit + used electroparts, where did I get them + circuitboard, schema, PCB
-
-Circut diagram was made in KiCAD.
+# Hardware
+Circut diagram and PCB were made in KiCAD.
 
 Used electroparts:
 - Raspberry pi Pico W - https://techfun.sk/produkt/raspberry-pi-pico-w/
@@ -32,6 +31,7 @@ Used electroparts:
 
 
 # Code + how to use libraries, install circuitpython to your device, explain code
+
 # 3d Model
 
 # notes
