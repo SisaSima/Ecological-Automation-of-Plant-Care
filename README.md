@@ -15,6 +15,10 @@ We are currently facing many environmental challenges, such as global warming an
 
 Circut diagram was made in KiCAD.
 
+Used electroparts:
+- hello world
+- ello world
+
 ![image](https://github.com/user-attachments/assets/eedb83a2-ca62-448c-ba7a-b21b84b948e6)
 
 ![image](https://github.com/user-attachments/assets/a57c8f23-9203-4a7f-9593-deeb4754fe72)
