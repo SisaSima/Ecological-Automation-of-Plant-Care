@@ -16,8 +16,15 @@ We are currently facing many environmental challenges, such as global warming an
 Circut diagram was made in KiCAD.
 
 Used electroparts:
-- hello world
-- ello world
+- Raspberry pi Pico W - https://techfun.sk/produkt/raspberry-pi-pico-w/
+- SHT30 - https://techfun.sk/produkt/senzor-teploty-a-vlhkosti-vzduchu-sht30/
+- Capacitive Soil Humidity sensor - https://techfun.sk/produkt/kapacitny-senzor-vlhkosti-pody/
+- OLED 1.3" display 128x64 - https://techfun.sk/produkt/oled-1-3-display-128x64/
+- Water Level sensor (homemade)
+- Small Water Pump - https://techfun.sk/produkt/mala-vodna-pumpa/
+- Battery
+- Charging Module - https://techfun.sk/produkt/nabijaci-modul-pre-litiove-baterie-tp4056-ochranny-obvod-rozne-typy/
+
 
 ![image](https://github.com/user-attachments/assets/eedb83a2-ca62-448c-ba7a-b21b84b948e6)
 
