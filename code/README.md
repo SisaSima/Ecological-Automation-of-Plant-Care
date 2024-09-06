@@ -9,4 +9,4 @@ There are two versions of the code: "code.py" and "code_v2.py":
 "code_v2.py" uses a simple machine learning model that learns how long to water the plant so that its final soil moisture value is the same as a pre-defined desired value - "chcena_val"
 
 
-In the folder ___ there are codes for testing the functionality of individual sensors
+In the "sensor test" folder there are codes for testing the functionality of individual sensors
