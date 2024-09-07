@@ -1,4 +1,6 @@
-![logoEAoPCsmol](https://github.com/user-attachments/assets/8b0e3da0-90b8-4e56-ac22-9fe4bca54d35) # Ecological-Automation-of-Plant-Care
+![logoEAoPC](https://github.com/user-attachments/assets/259d29a1-31d5-4f31-8fb7-bfc73f96fc70)
+
+# Ecological-Automation-of-Plant-Care
 
 We are currently facing many environmental challenges, such as global warming and water scarcity, which pose great challenges for effective sustainable plant cultivation. Traditional methods of irrigation and care often lead to insufficient watering or, conversely, to overflowing the plants, which not only wastes water, but can also cause soil rot, which can later appear on the products.
 
