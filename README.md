@@ -30,8 +30,12 @@ Used electroparts:
 ![image](https://github.com/user-attachments/assets/a57c8f23-9203-4a7f-9593-deeb4754fe72)
 
 
-# Code + how to use libraries, install circuitpython to your device, explain code
-#### 
+# Code
+#### To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found here.
+
+#### Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
+
+#### To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). The program is still under development, so there are two versions of the code.py code in the folder.
 
 
 # 3d Model
