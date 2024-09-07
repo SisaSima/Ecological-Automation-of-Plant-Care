@@ -31,8 +31,16 @@ Used electroparts:
 
 
 # Code + how to use libraries, install circuitpython to your device, explain code
+#### 
+
 
 # 3d Model
+#### I shared a 'box_model.3mf' file, ready to be printed on 3d printer. The model should look like this:
+
+##### Insert a model image
+
+#### There is a place left for the battery and charging module. I powered it from micro USB-B (connected directly to Raspberry pi Pico W).
+#### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
 
 # notes
 - https://github.com/khristinakokolus/smart_flowerpot inspiration
