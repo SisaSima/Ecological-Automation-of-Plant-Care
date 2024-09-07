@@ -10,6 +10,8 @@ We are currently facing many environmental challenges, such as global warming an
  
  This work describes in detail the individual steps of the development of this device from the design to the implementation of sensors and machine learning algorithms.
 
+![DSCF5349](https://github.com/user-attachments/assets/0a776cb1-b89a-4d63-9952-0938f3a37e86)
+
 
 # Hardware
 Circut diagram and PCB were made in KiCAD.
