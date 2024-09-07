@@ -55,3 +55,4 @@ Used electroparts:
 
 
 ![logoEAoPCsmol](https://github.com/user-attachments/assets/348b5a2f-84bf-43f0-9a76-92f8ae9f7a8e)
+####Simona Velik8
