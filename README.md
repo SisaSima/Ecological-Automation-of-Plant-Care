@@ -45,7 +45,7 @@ Used electroparts:
 
 ##### Insert a model image
 
-#### There is a place left for the battery and charging module. I powered it from micro USB-B (connected directly to Raspberry pi Pico W).
+#### There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
 #### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
 
 # notes
