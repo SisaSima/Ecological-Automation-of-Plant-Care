@@ -1,4 +1,4 @@
-![logoEAoPCsmol](https://github.com/user-attachments/assets/633c5a6e-a7f0-4581-8e08-0d9b54b6593b)
+![logoEAoPCsmol](https://github.com/user-attachments/assets/348b5a2f-84bf-43f0-9a76-92f8ae9f7a8e)
 
 
 # Ecological-Automation-of-Plant-Care
