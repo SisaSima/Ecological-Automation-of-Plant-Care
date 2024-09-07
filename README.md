@@ -1,4 +1,3 @@
-![logoEAoPCsmol](https://github.com/user-attachments/assets/348b5a2f-84bf-43f0-9a76-92f8ae9f7a8e)
 # Ecological-Automation-of-Plant-Care
 
 We are currently facing many environmental challenges, such as global warming and water scarcity, which pose great challenges for effective sustainable plant cultivation. Traditional methods of irrigation and care often lead to insufficient watering or, conversely, to overflowing the plants, which not only wastes water, but can also cause soil rot, which can later appear on the products.
@@ -52,3 +51,7 @@ Used electroparts:
 
 #### There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
 #### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
+
+
+
+![logoEAoPCsmol](https://github.com/user-attachments/assets/348b5a2f-84bf-43f0-9a76-92f8ae9f7a8e)
