@@ -28,9 +28,10 @@ Used electroparts:
 - Battery
 - Charging Module - https://techfun.sk/produkt/nabijaci-modul-pre-litiove-baterie-tp4056-ochranny-obvod-rozne-typy/
 
-
+### Diagram
 ![image](https://github.com/user-attachments/assets/eedb83a2-ca62-448c-ba7a-b21b84b948e6)
 
+### PCB
 ![image](https://github.com/user-attachments/assets/a57c8f23-9203-4a7f-9593-deeb4754fe72)
 
 
