@@ -13,6 +13,7 @@ We are currently facing many environmental challenges, such as global warming an
 ![DSCF5349](https://github.com/user-attachments/assets/0a776cb1-b89a-4d63-9952-0938f3a37e86)
 
 
+
 # Hardware
 Circut diagram and PCB were made in KiCAD.
 
@@ -32,12 +33,14 @@ Used electroparts:
 ![image](https://github.com/user-attachments/assets/a57c8f23-9203-4a7f-9593-deeb4754fe72)
 
 
+
 # Code
 #### To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found [here](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython).
 
 #### Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
 
 #### To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). The program is still under development, so there are two versions of the code.py code in the folder.
+
 
 
 # 3d Model
@@ -47,7 +50,3 @@ Used electroparts:
 
 #### There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
 #### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
-
-# notes
-- https://github.com/khristinakokolus/smart_flowerpot inspiration
-- https://github.com/pop-os/shell
