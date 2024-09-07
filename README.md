@@ -31,7 +31,7 @@ Used electroparts:
 
 
 # Code
-#### To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found here.
+#### To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found [here](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython).
 
 #### Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
 
