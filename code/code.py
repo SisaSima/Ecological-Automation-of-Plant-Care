@@ -9,24 +9,63 @@ from adafruit_display_text import label
 from adafruit_displayio_sh1106 import SH1106
 from digitalio import DigitalInOut, Direction, Pull
 import adafruit_sht31d
+import adafruit_sdcard
+import storage
+
 
 # premenne
-doba_polievania = 5
+doba_polievania = float(5)
 cas_kontroly = 0.1
 dry_val = 45
+chcena_val = 60 # pozadovana vlhkost
+filename = "doba_polievania"
+filename2 = "vlhkost"
+odmlka_senzoru = 5
 
-#polievanie premenne
+   
+
+# výška hladiny premenne
 malo = 0.35
 polovica = 0.56
 akurat = 0.7
 full = 0.85
 error = 1.5
 
+#SDcard
+# Initialize SPI bus and pins
+spi = busio.SPI(board.GP18, MOSI=board.GP19, MISO=board.GP16)
+cs = digitalio.DigitalInOut(board.GP21)  # Chip select pin (pin 7)
+# Initialize SD card object
+sdcard = adafruit_sdcard.SDCard(spi, cs)
+# Mount the SD card
+vfs = storage.VfsFat(sdcard)
+storage.mount(vfs, "/sd")
+# Create a file and write data to it
+
+try:
+    with open("/sd/{0}.txt".format(filename), "r") as file:
+        for line in file:
+            pass
+        doba_polievania = float(line)
+        print(doba_polievania)
+except:
+    doba_polievania = doba_polievania
+
+
+"""
+THIS WORKS
+with open("/sd/{0}.txt".format(filename), "a") as file:
+    file.write("\n{0}".format(doba_polievania))
+with open("/sd/{0}.txt".format(filename), "r") as file:
+    for line in file:
+        pass
+    doba_polievania = line
+    print(doba_polievania)
+"""
 
 # SHT30
 i2c_sht30 = busio.I2C(scl=board.GP3, sda=board.GP2)
 sensor = adafruit_sht31d.SHT31D(i2c_sht30)
-
 
 # moturek definice
 moturek = digitalio.DigitalInOut(board.GP13)
@@ -41,7 +80,7 @@ i2c = busio.I2C(scl=scl_pin, sda=sda_pin)
 display_bus = displayio.I2CDisplay(i2c, device_address=0x3C)
 WIDTH = 130
 HEIGHT = 70
-display = SH1106(display_bus, width=WIDTH, height=HEIGHT)
+display = SH1106(display_bus, width=WIDTH, height=HEIGHT, rotation=180)
 display.auto_refresh = False
 splash = displayio.Group()
 display.show(splash)
@@ -66,8 +105,15 @@ def get_moisture_level(voltage):
     return 100-(voltage / 3.3)*100
     #return voltage/3.3
 
-while True:
 
+while True:
+   
+### IF DONE: DElETE ###
+    #doba_polievania = 1 ### <--THIS ### JUST DELETEIT, lebo ti to kurví program
+    
+    print(doba_polievania)
+    #print(type(doba_polievania))
+    
     temperature = sensor.temperature
     humidity = sensor.relative_humidity
     print(f"Temperature: {temperature:.2f} C")
@@ -104,6 +150,26 @@ while True:
     if moisture_level*(120/100) <= dry_val:
         print('moturek on')
         moturek.value = True
+        time.sleep(doba_polievania)
+        moturek.value = False
+        time.sleep(odmlka_senzoru)
+
+        # znovu zneram hodnotu na moisture analog pine, aby som zistila novú hodnotu
+        voltage = get_voltage(soil_moisture_pin)
+        moisture_level = get_moisture_level(voltage)
+        with open("/sd/{0}.txt".format(filename2), "a") as file:
+            file.write("\n{0}".format(moisture_level*(120/100)))
+
+        #matematicka operacia
+        doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
+        with open("/sd/{0}.txt".format(filename), "a") as file:
+            file.write("\n{0}".format(doba_polievania))
+
+        # display refresh
+        text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
+        display.refresh() 
+        
+        
         text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh()        
         #time.sleep(doba_polievania)
@@ -113,5 +179,15 @@ while True:
         moturek.value = False
         text_area.text = "soil:{0}\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh()        
-        
+
+# new doba_polievania value check
+    try:
+        with open("/sd/{0}.txt".format(filename), "r") as file:
+            for line in file:
+                pass
+            doba_polievania = float(line)
+            print(doba_polievania)
+    except:
+        doba_polievania = doba_polievania
+     
     time.sleep(cas_kontroly)
