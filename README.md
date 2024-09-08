@@ -59,7 +59,7 @@ You can find the program and its user manual in the "dataread" folder.
 
 The result should look like this:
 
-![test_graf](https://github.com/user-attachments/assets/1fbcd911-1986-4a9d-8b8d-f007205fb563)
+![test_graph](https://github.com/user-attachments/assets/03a4673f-71c2-46a3-b4e4-695a1bb6a1bc)
 
 
 # 3D Model
