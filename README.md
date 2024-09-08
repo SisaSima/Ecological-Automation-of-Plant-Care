@@ -41,8 +41,17 @@ Used electroparts:
 
 #### Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
 
-#### To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). The program is still under development, so there are two versions of the code.py code in the folder.
+#### To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
+- code.py
+- code_v_noML.py
+#### code_v_noML.py has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
+### Machine Learning?
+#### As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we go by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
+```python
+doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
+```
+#### The resulting value is then saved to a file in the SD card and then used in the next cycle as the watering time. The same way is stored the value of soil moisture after watering, so that it is then possible to create a graph comparing these two values
 
 
 # 3d Model
