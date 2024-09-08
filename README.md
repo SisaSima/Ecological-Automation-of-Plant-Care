@@ -47,7 +47,7 @@ Used electroparts:
 #### code_v_noML.py has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
 ### Machine Learning?
-#### As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we go by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
+#### As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
 ```python
 doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
 ```
