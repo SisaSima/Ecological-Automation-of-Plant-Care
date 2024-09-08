@@ -1,7 +1,3 @@
-# co treba pridat:
-# 	doba_polievania na display
-# 	ukladanie pomocou "a"; oprav read suboru na line 172
-
 import time
 import board
 from analogio import AnalogIn
@@ -13,18 +9,11 @@ from adafruit_display_text import label
 from adafruit_displayio_sh1106 import SH1106
 from digitalio import DigitalInOut, Direction, Pull
 import adafruit_sht31d
-import adafruit_sdcard
-import storage
-
-
 
 # premenne
-doba_polievania = 2 # to je prva definovana hodnota
+doba_polievania = 5
 cas_kontroly = 0.1
-dry_val = 45 # minimalna vlhkost
-chcena_val = 60 # pozadovana vlhkost
-filename = "papradie"
-odmlka_senzoru = 10
+dry_val = 45
 
 #polievanie premenne
 malo = 0.35
@@ -32,33 +21,6 @@ polovica = 0.56
 akurat = 0.7
 full = 0.85
 error = 1.5
-
-#SDcard
-# Initialize SPI bus and pins
-spi = busio.SPI(board.GP18, MOSI=board.GP19, MISO=board.GP16)
-cs = digitalio.DigitalInOut(board.GP21)  # Chip select pin (pin 7)
-# Initialize SD card object
-sdcard = adafruit_sdcard.SDCard(spi, cs)
-# Mount the SD card
-vfs = storage.VfsFat(sdcard)
-storage.mount(vfs, "/sd")
-# Create a file and write data to it
-
-with open("/sd/{0}.txt".format(filename), "a") as file:
-    file.write("{0}".format(doba_polievania))
-# Read data from the file
-
-#with open("/sd/{0}.txt".format(filename), "r") as file:
-#    for line in file:
-#        pass
-#    doba_polievania = file
-#    print(doba_polievania)
-
-#with open("/sd/kokos.txt", "r") as file:
-#    for line in file:
-#        pass
-#    data = line
-#    print(data)
 
 
 # SHT30
@@ -79,7 +41,7 @@ i2c = busio.I2C(scl=scl_pin, sda=sda_pin)
 display_bus = displayio.I2CDisplay(i2c, device_address=0x3C)
 WIDTH = 130
 HEIGHT = 70
-display = SH1106(display_bus, width=WIDTH, height=HEIGHT)
+display = SH1106(display_bus, width=WIDTH, height=HEIGHT, rotation=180)
 display.auto_refresh = False
 splash = displayio.Group()
 display.show(splash)
@@ -105,7 +67,7 @@ def get_moisture_level(voltage):
     #return voltage/3.3
 
 while True:
-    print(doba_polievania)
+
     temperature = sensor.temperature
     humidity = sensor.relative_humidity
     print(f"Temperature: {temperature:.2f} C")
@@ -139,44 +101,17 @@ while True:
     text_area.text = "soil:{0}\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
     display.refresh()
 
-
-# if less than DRYVAL
-
     if moisture_level*(120/100) <= dry_val:
-        print("moturek on")
+        print('moturek on')
         moturek.value = True
-        time.sleep(doba_polievania)
-        moturek.value = False
-        time.sleep(odmlka_senzoru)
-        # matematicka operacia
-            # chcena_val = 60; dry_val = 40; momentalna_val = moisture_level*(120/100)
-        doba_polievania = doba_polievania*(chcena_val/moisture_level*(120/100))
-        with open("/sd/{0}.txt".format(filename), "w") as file:
-            file.write("{0}".format(doba_polievania))
-        # display refresh
         text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh()        
-           
-        
-        #print('moturek on')
-        #moturek.value = True
-        #text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
-        #display.refresh()        
-        
         #time.sleep(doba_polievania)
-
 
     else:
         print('moturek off')
         moturek.value = False
         text_area.text = "soil:{0}\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh()        
-    
-    with open("/sd/{0}.txt".format(filename), "r") as file:
-        #for line in file:
-        #    pass
-        #doba_polievania = file
-        #print(doba_polievania)
-        doba_polievania = float(file.read())  
+        
     time.sleep(cas_kontroly)
-
