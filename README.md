@@ -53,8 +53,14 @@ doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
 ```
 The resulting value is then saved to a file in the SD card and then used in the next cycle as the watering time. The same way is stored the value of soil moisture after watering, so that it is then possible to create a graph comparing these two values
 
+### Dataread
+In order to better navigate the collected data, I programmed the code that creates a graph from it.
+You can find the program and its user manual in the "dataread" folder.
+The result should look like this:
+![test_graf](https://github.com/user-attachments/assets/1fbcd911-1986-4a9d-8b8d-f007205fb563)
 
-# 3d Model
+
+# 3D Model
  I shared a 'box_model.3mf' file, ready to be printed on 3d printer. The model should look like this:
 
 ##### Insert a model image
