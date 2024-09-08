@@ -37,29 +37,29 @@ Used electroparts:
 
 
 # Code
-#### To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found [here](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython).
+ To run the code on the Raspberry pi Pico W, you need to install circuitpython on it. Detailed instructions for its installation can be found [here](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython).
 
-#### Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
+Then you just transfer the files from the code folder to the device. In order for the programs to run, it is necessary to move the "lib" folder, in which all used libraries are stored, to the device.
 
-#### To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
+To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
 - code.py
 - code_v_noML.py
-#### code_v_noML.py has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
+ code_v_noML.py has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
 ### Machine Learning?
-#### As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
+As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
 ```python
 doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
 ```
-#### The resulting value is then saved to a file in the SD card and then used in the next cycle as the watering time. The same way is stored the value of soil moisture after watering, so that it is then possible to create a graph comparing these two values
+The resulting value is then saved to a file in the SD card and then used in the next cycle as the watering time. The same way is stored the value of soil moisture after watering, so that it is then possible to create a graph comparing these two values
 
 
 # 3d Model
-#### I shared a 'box_model.3mf' file, ready to be printed on 3d printer. The model should look like this:
+ I shared a 'box_model.3mf' file, ready to be printed on 3d printer. The model should look like this:
 
 ##### Insert a model image
 
-#### There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
+ There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
 #### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
 
 
