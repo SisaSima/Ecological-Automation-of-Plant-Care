@@ -58,6 +58,7 @@ In order to better navigate the collected data, I programmed the code that creat
 You can find the program and its user manual in the "dataread" folder.
 
 The result should look like this:
+
 ![test_graf](https://github.com/user-attachments/assets/1fbcd911-1986-4a9d-8b8d-f007205fb563)
 
 
