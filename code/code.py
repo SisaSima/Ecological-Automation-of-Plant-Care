@@ -71,8 +71,7 @@ sensor = adafruit_sht31d.SHT31D(i2c_sht30)
 moturek = digitalio.DigitalInOut(board.GP13)
 moturek.direction = digitalio.Direction.OUTPUT
 
-# Didplay "Even if a cow walked by udder, if it works, dont touch it"
-# Release any resources currently in use for the displays
+# Display
 displayio.release_displays()
 sda_pin = board.GP0
 scl_pin = board.GP1
@@ -93,26 +92,18 @@ splash.append(text_area)
 soil_moisture_pin = AnalogIn(board.A1)
 #hladina vody
 hladina_vody_pin = AnalogIn(board.A0)
-# sprav vo while cykle if hladina vody < x: print('m8lo vody')..atd
 
 
 def get_voltage(pin):
-    # Convert the analog pin value (0-65535) to a voltage (0-3.3V)
     return (pin.value * 3.3) / 65536
 def get_moisture_level(voltage):
-    # Convert the voltage to a moisture level percentage
-    # This is a rough conversion, adjust based on your sensor's specifications
     return 100-(voltage / 3.3)*100
     #return voltage/3.3
 
 
 while True:
-   
-### IF DONE: DElETE ###
-    #doba_polievania = 1 ### <--THIS ### JUST DELETEIT, lebo ti to kurví program
-    
+
     print(doba_polievania)
-    #print(type(doba_polievania))
     
     temperature = sensor.temperature
     humidity = sensor.relative_humidity
@@ -160,7 +151,7 @@ while True:
         with open("/sd/{0}.txt".format(filename2), "a") as file:
             file.write("\n{0}".format(moisture_level*(120/100)))
 
-        #matematicka operacia
+        # algoritmus
         doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
         with open("/sd/{0}.txt".format(filename), "a") as file:
             file.write("\n{0}".format(doba_polievania))
@@ -168,7 +159,6 @@ while True:
         # display refresh
         text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh() 
-        
         
         text_area.text = "soil:{0} Motor on\nhladina:{1}\nteplota:{2}\nvlhkost:{3}".format(moisture_level*(120/100),voltage_hladina_vody_value, temperature, humidity)
         display.refresh()        
