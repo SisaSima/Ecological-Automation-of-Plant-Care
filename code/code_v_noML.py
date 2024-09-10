@@ -32,8 +32,7 @@ sensor = adafruit_sht31d.SHT31D(i2c_sht30)
 moturek = digitalio.DigitalInOut(board.GP13)
 moturek.direction = digitalio.Direction.OUTPUT
 
-# Didplay "Even if a cow walked by udder, if it works, dont touch it"
-# Release any resources currently in use for the displays
+# Didplay
 displayio.release_displays()
 sda_pin = board.GP0
 scl_pin = board.GP1
@@ -58,11 +57,8 @@ hladina_vody_pin = AnalogIn(board.A0)
 
 
 def get_voltage(pin):
-    # Convert the analog pin value (0-65535) to a voltage (0-3.3V)
     return (pin.value * 3.3) / 65536
 def get_moisture_level(voltage):
-    # Convert the voltage to a moisture level percentage
-    # This is a rough conversion, adjust based on your sensor's specifications
     return 100-(voltage / 3.3)*100
     #return voltage/3.3
 
