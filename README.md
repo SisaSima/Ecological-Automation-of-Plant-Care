@@ -44,7 +44,8 @@ Then you just transfer the files from the code folder to the device. In order fo
 To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
 - code.py
 - code_v_noML.py
- code_v_noML.py has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
+
+"code_v_noML.py" has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
 ### Machine Learning?
 As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
@@ -68,7 +69,7 @@ The result should look like this:
 ![image](https://github.com/user-attachments/assets/81b7bc2d-36eb-47d5-b9e9-e90b94dbf5d8)
 
  There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
-#### WARNING! UPPER HOLE FOR USB CABLE is too small. You can enlanre it in any 3D modeling program. In case you are not able to do that, you can use a drill.
+#### WARNING! UPPER HOLE FOR USB CABLE is too small. You can enlarge it in any 3D modeling program. In case you are not able to do that, you can use a drill.
 
 
 
