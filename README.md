@@ -65,10 +65,10 @@ The result should look like this:
 # 3D Model
  I shared a 'box_model.3mf' file, ready to be printed on 3d printer. The model should look like this:
 
-##### Insert a model image
+![image](https://github.com/user-attachments/assets/81b7bc2d-36eb-47d5-b9e9-e90b94dbf5d8)
 
  There is a place left for the battery and charging module. I personally filled the hole with memory foam and powered it directly with micro USB-B (connected to Raspberry pi Pico W).
-#### WARNING! UPPER HOLE FOR USB CABLE is too small. The hole needs to be enlarged after printing (I used a drill).
+#### WARNING! UPPER HOLE FOR USB CABLE is too small. You can enlanre it in any 3D modeling program. In case you are not able to do that, you can use a drill.
 
 
 
