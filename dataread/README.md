@@ -9,7 +9,8 @@ python main.py
 
 The result should look like this:
 
-![test_graf](https://github.com/user-attachments/assets/cba3c53e-2f19-4726-8179-d6d8cd911c4e)
+![test_graf](https://github.com/user-attachments/assets/3c62cde6-d29f-4ebe-bc53-5e7293176bc4)
+
 
 
 orange is for soil humidity and blue for watering time
