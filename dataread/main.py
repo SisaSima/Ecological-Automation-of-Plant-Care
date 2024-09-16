@@ -50,12 +50,18 @@ with open("{0}.txt".format(filename2), "r") as file2:
 
 x1 = length
 y1 = list1
-plt.plot(x1, y1,  label = "DP")
+plt.subplot(2, 1, 2)
+plt.plot(x1, y1, marker = 'o', ms = 2, color = 'r')
+plt.xlabel('počet pokusov')
+plt.ylabel('vlhkosť pôdy')
+
 x2 = length
 y2 = list2
-plt.plot(x2, y2, label = "VL")
+plt.subplot(2, 1, 1)
+plt.plot(x2, y2, marker = 'o', ms = 2)
+#plt.xlabel('počet pokusov')
+plt.ylabel('doba plievania')
 
-plt.xlabel('x - axis')
-plt.ylabel('y - axis')
-plt.title('Graf závislosti počtu pokusu od vlhkosti pôdy\n a doby polievania')
+
+plt.title('Graf závislosti počtu pokusov od vlhkosti pôdy\n a doby polievania')
 plt.show()
