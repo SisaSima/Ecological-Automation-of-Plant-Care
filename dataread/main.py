@@ -53,14 +53,14 @@ y1 = list1
 plt.subplot(2, 1, 2)
 plt.plot(x1, y1, marker = 'o', ms = 2, color = 'r')
 plt.xlabel('počet pokusov')
-plt.ylabel('vlhkosť pôdy')
+plt.ylabel('doba polievania')
 
 x2 = length
 y2 = list2
 plt.subplot(2, 1, 1)
 plt.plot(x2, y2, marker = 'o', ms = 2)
 #plt.xlabel('počet pokusov')
-plt.ylabel('doba plievania')
+plt.ylabel('vlhkosť pôdy')
 
 
 plt.title('Graf závislosti počtu pokusov od vlhkosti pôdy\n a doby polievania')
