@@ -25,7 +25,7 @@ Used electroparts:
 - OLED 1.3" display 128x64 - https://techfun.sk/produkt/oled-1-3-display-128x64/
 - Water Level sensor (homemade)
 - Small Water Pump - https://techfun.sk/produkt/mala-vodna-pumpa/
-- Battery
+- Battery 5V
 - Charging Module - https://techfun.sk/produkt/nabijaci-modul-pre-litiove-baterie-tp4056-ochranny-obvod-rozne-typy/
 
 ### Diagram
