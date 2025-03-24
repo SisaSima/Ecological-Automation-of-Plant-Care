@@ -3,13 +3,13 @@
 We are currently facing many environmental challenges, such as global warming and water scarcity, which pose great challenges for effective sustainable plant cultivation. Traditional methods of irrigation and care often lead to insufficient watering or, conversely, to overflowing the plants, which not only wastes water, but can also cause soil rot, which can later appear on the products.
 
  
- In the future, an innovative solution to these problems may be ecological automation of plant care, which combines automated irrigation based on machine learning and recycling of excess water.
+ In the future, an innovative solution to these problems may be ecological automation of plant care, which combines automated irrigation based on learning and recycling of excess water.
 
  
  The main goal of the work is to create an automated system that monitors and controls soil irrigation, while responding to environmental factors such as air humidity and ambient temperature. An important part of the project is also efficient water management through its recycling. Excess water is captured, filtered and reused, which significantly contributes to reducing consumption and promotes sustainability.
 
  
- This work describes in detail the individual steps of the development of this device from the design to the implementation of sensors and machine learning algorithms.
+ This work describes in detail the individual steps of the development of this device from the design to the implementation of sensors and learning algorithms.
 
 ![DSCF5349](https://github.com/user-attachments/assets/0a776cb1-b89a-4d63-9952-0938f3a37e86)
 
@@ -43,12 +43,12 @@ Then you just transfer the files from the code folder to the device. In order fo
 
 To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
 - code.py
-- code_v_noML.py
+- code_v_noLA.py
 
-"code_v_noML.py" has no Machine Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
+"code_v_noLA.py" has no Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
-### Machine Learning?
-As I mentioned, this project is powered by machine learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
+### Algorithm
+As I mentioned, this project is powered by learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
 ```python
 doba_polievania = doba_polievania*(chcena_val/(moisture_level*(120/100)))
 ```
