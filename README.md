@@ -43,9 +43,9 @@ Then you just transfer the files from the code folder to the device. In order fo
 
 To immediately, automatically start the program after starting, it is necessary to name the required file "code.py" (this step is already done). IN the folder there are wro versions of "code.py" file:
 - code.py
-- code_v_noLA.py
+- code_no_LA.py
 
-"code_v_noLA.py" has no Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
+"code_no_LA.py" has no Learning algorithm implemented and it's used just for testing functionnality od circuit and program. On the other hand code.py has already implemented algorithms and is used as a final version of code.
 
 ### Algorithm
 As I mentioned, this project is powered by learning algorithm used to find the perfect amout of water to irrigate the soil. This operation is done by calculating difference between wanted soil moisture and the one we got by irrigating. the difference is than used to enlenght or enshort the time of irrigation.
